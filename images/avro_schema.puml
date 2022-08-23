@@ -1,0 +1,28 @@
+@startuml
+
+'skinparam linetype ortho
+
+interface Schema
+
+class BooleanSchema
+class LongSchema
+class StringSchema
+class NamedSchema
+
+class Field
+
+Schema <.. BooleanSchema
+Schema <.. LongSchema
+Schema <.. StringSchema
+Schema <.. NamedSchema
+
+NamedSchema <-- RecordSchema
+NamedSchema <-- EnumSchema
+
+
+
+Schema <- Field
+
+
+
+@enduml
